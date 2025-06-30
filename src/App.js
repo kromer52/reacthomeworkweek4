@@ -21,6 +21,7 @@ export default function App() {
       humidity: data.main.humidity,
       wind: data.wind.speed,
       city: data.name,
+      icon: data.weather[0].icon, 
     });
   })
   .catch((error) => {
@@ -28,10 +29,19 @@ export default function App() {
     setWeatherData(null);
   });
   }
+function formatDate(date) {
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getDay()];
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) minutes = `0${minutes}`;
+  return `${day} ${hours}:${minutes}`;
+}
 
   return (
     <div className="App">
       <h1>Weather App</h1>
+      <p>{formatDate(new Date())}</p>
       <form onSubmit={handleSearch}>
         <input
           type="text"
