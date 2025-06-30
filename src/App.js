@@ -4,12 +4,13 @@ import Weather from "./Weather";
 import "./App.css";
 
 export default function App() {
-  const [city, setCity] = useState("London");
+  const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
 
-  useEffect(() => {
-    searchCity(city);
-  }, []);
+ useEffect(() => {
+  searchCity("London");
+}, []);
+
 
   function formatDate(timestamp) {
     const date = new Date(timestamp * 1000);
