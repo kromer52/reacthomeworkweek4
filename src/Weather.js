@@ -13,8 +13,11 @@ export default function Weather({ data }) {
         </p>
       </div>
       <div className="weather-app-temperature-container">
-        {/* Icon placeholder — can be added later */}
-        <div id="icon"></div>
+         <img
+    src={data.iconUrl}
+    alt={data.description}
+    className="weather-app-icon"
+  />
         <div className="weather-app-temperature">{data.temperature}</div>
         <div className="weatehr-app-unit">°C</div>
       </div>

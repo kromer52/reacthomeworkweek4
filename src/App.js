@@ -33,6 +33,7 @@ export default function App() {
         humidity: response.data.temperature.humidity,
         wind: response.data.wind.speed,
         time: formatDate(response.data.time),
+        iconUrl: response.data.condition.icon_url, 
       });
     });
   }
