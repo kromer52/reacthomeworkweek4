@@ -70,7 +70,7 @@ export default function App() {
         </a>
         , code hosted on{" "}
         <a
-          href="https://github.com/kromer52/homeworkweek7weatherapp"
+          href="https://github.com/kromer52/reacthomeworkweek4"
           target="_blank"
           rel="noreferrer"
         >
@@ -78,7 +78,7 @@ export default function App() {
         </a>{" "}
         and website hosted on{" "}
         <a
-          href="https://homeworkweek7weatherapp.vercel.app/"
+          href="https://reacthomeworkweek4.vercel.app/"
           target="_blank"
           rel="noreferrer"
         >
